@@ -1,0 +1,47 @@
+package GenericsArray;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AnyTypeDataArrayMain {
+    public static void main(String[] args) {
+        List<Integer> intList = new ArrayList<>();
+        intList.add(2019);
+
+        List<String> strList = new ArrayList<>();
+        strList.add(" is a great year! ");
+
+        List<Long> lngList = new ArrayList<>();
+        lngList.add(3450000L);
+
+        List<Double> dblList = new ArrayList<>();
+        dblList.add(3.14);
+
+        List<Character> chrList = new ArrayList<>();
+        chrList.add('m');
+
+        List<Object> mix = new ArrayList<>(); // creating an array of mixed type data
+        mix.addAll(intList);                  // adding the data
+        mix.addAll(strList);
+        mix.addAll(lngList);
+        mix.addAll(dblList);
+        mix.addAll(chrList);
+
+        for (Integer integer : intList)
+            System.out.println("The Integer value is " + integer);
+        for (String string : strList)
+            System.out.println("The String value is " + string);
+        for (Long lng : lngList)
+            System.out.println("The Long value is " + lng);
+        for (Double dbl : dblList)
+            System.out.println("The Double value is " + dbl);
+        for (Character chr : chrList)
+            System.out.println("The Character value is " + chr);
+        System.out.print("Any type data array:  ");
+        for (Object o : mix)
+            System.out.print(o);
+        System.out.println();
+        System.out.println("The value of index 3 is " + mix.get(3)); // using of method "get" to find the value
+        // of a particular index in the array.
+    }
+}
