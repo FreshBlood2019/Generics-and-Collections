@@ -1,0 +1,37 @@
+package JavaClass09;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class LinkedListMain {
+    public static void main(String[] args) {
+        Book book1 = new Book(1, 1866, "Crime and Punishment", "Fedor Dostoevsky");
+        Book book2 = new Book(2, 1813, "Pride and Prejudice", "Jane Austin");
+        Book book3 = new Book(3, 1868, "War and Peace", "Leo Tolstoy");
+
+        List<Book> booklink = new LinkedList<>(); // creating a list of books
+        booklink.add(book1);                      // and adding books to the list
+        booklink.add(book2);
+        booklink.add(book3);
+
+        System.out.println("The original book list: ");
+        Util.printTheBookList(booklink);  // using the method to print the list of books
+
+        booklink.remove(book2); // a program method to remove one book from the list
+        System.out.println("The list after removing book 2:");
+        System.out.println(booklink);
+
+
+    }
+}
+
+The output is
+
+The original book list: 
+Book{id=1, year=1866, title='Crime and Punishment', author='Fedor Dostoevsky'}
+Book{id=2, year=1813, title='Pride and Prejudice', author='Jane Austin'}
+Book{id=3, year=1868, title='War and Peace', author='Leo Tolstoy'}
+The list after removing book 2:
+[Book{id=1, year=1866, title='Crime and Punishment', author='Fedor Dostoevsky'}, Book{id=3, year=1868, title='War and Peace', author='Leo Tolstoy'}]
+
+Process finished with exit code 0
