@@ -1,56 +1,25 @@
 package GenericsArray;
 
-import java.util.ArrayList;
-import java.util.List;
+public class GenericsArray1<T> {
+    private T[] array;
 
-public class AnyTypeDataArrayMain {
-    public static void main(String[] args) {
-        List<Integer> intList = new ArrayList<>();
-        intList.add(2019);
-
-        List<String> strList = new ArrayList<>();
-        strList.add(" is a great year! ");
-
-        List<Long> lngList = new ArrayList<>();
-        lngList.add(3450000L);
-
-        List<Double> dblList = new ArrayList<>();
-        dblList.add(3.14);
-
-        List<Character> chrList = new ArrayList<>();
-        chrList.add('m');
-
-        List<Object> mix = new ArrayList<>(); // creating an array of mixed type data
-        mix.addAll(intList);                  // adding the data
-        mix.addAll(strList);
-        mix.addAll(lngList);
-        mix.addAll(dblList);
-        mix.addAll(chrList);
-
-        for (Integer integer : intList)
-            System.out.println("The Integer value is " + integer);
-        for (String string : strList)
-            System.out.println("The String value is " + string);
-        for (Long lng : lngList)
-            System.out.println("The Long value is " + lng);
-        for (Double dbl : dblList)
-            System.out.println("The Double value is " + dbl);
-        for (Character chr : chrList)
-            System.out.println("The Character value is " + chr);
-        System.out.print("Any type data array:  ");
-        for (Object o : mix)
-            System.out.print(o);
-        System.out.println();
-        System.out.println("The value of index 3 is " + mix.get(3)); // using of method "get" to find the value
-        // of a particular index in the array.
+    public GenericsArray1() {
     }
-}
-The output is:
-The Integer value is 2019
-The String value is  is a great year! 
-The Long value is 3450000
-The Double value is 3.14
-The Character value is m
-Any type data array:  2019 is a great year! 34500003.14m
-The value of index 3 is 3.14
 
+    public GenericsArray1(T[] array) {
+        this.array = array;
+    }
+
+    public T[] getArray() {
+        return array;
+    }
+
+    public void setArray(T[] array) {
+        this.array = array;
+    }
+
+    public T getValueByIndex(int i) {
+        return array[i];
+    }
+
+}
