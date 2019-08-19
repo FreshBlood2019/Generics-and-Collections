@@ -1,12 +1,12 @@
 package GenericsArray;
 
 public class GenericsArray1<T> {
-    private T[] array;
+    private T[] array;  //creating an array of T-type
 
     public GenericsArray1() {
     }
 
-    public GenericsArray1(T[] array) {
+    public GenericsArray1(T[] array) {  //a constructer with an argument
         this.array = array;
     }
 
