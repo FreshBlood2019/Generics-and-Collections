@@ -1,0 +1,19 @@
+package GenericsArray;
+
+public class GenericsArray2Main {
+    public static void main(String[] args) {
+        String[] strings = {"Hello", "Hi", "Hey", "Yo"};
+        GenericsArray1<String> str = new GenericsArray1<>(strings);
+        Character[] chars = {'h', 'S', '5', '*', 'q'};
+        GenericsArray1<Character> ch = new GenericsArray1<>(chars);
+        System.out.println(str.getValueByIndex(1));
+        System.out.println(ch.getValueByIndex(2));
+    }
+}
+
+
+The output is:
+Hi
+5
+
+Process finished with exit code 0
