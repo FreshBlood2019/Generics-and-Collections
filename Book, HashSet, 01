@@ -1,0 +1,75 @@
+package JavaClass09;
+
+import java.util.Objects;
+
+public class Book2 {
+    private int id;
+    private int year;
+    private String title;
+    private String author;
+
+    public Book2(int id, int year, String title, String author) {
+        this.id = id;
+        this.year = year;
+        this.title = title;
+        this.author = author;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book2 that = (Book2) o;
+        return id == that.id &&
+                year == that.year &&
+                title.equals(that.title) &&
+                author.equals(that.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, year, title, author);
+    }
+
+    @Override
+    public String toString() {
+        return "Book2{" +
+                "id=" + id +
+                ", year=" + year +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                '}';
+    }
+}
