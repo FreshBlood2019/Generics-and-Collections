@@ -14,7 +14,7 @@ public class UtilHashSet {
             for (String vlw : vowels) { //for each loop to look through each vowel letter
                 if (book.getTitle().toLowerCase().startsWith(vlw)) { //if-method to single out the book we need
                     System.out.println(book); //to show the book we found
-                    break; //the usage of "break" iterator saves the time in case of finding the necessary book
+                    break; //the usage of "break" operator saves the time in case of finding the necessary book
                 }
             }
         }
