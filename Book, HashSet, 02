@@ -1,0 +1,22 @@
+package JavaClass09;
+
+import java.util.Set;
+
+public class UtilHashSet {
+    public static void getBooks(Set<Book2> data) { //a method to print the set of books
+        for (Book2 book : data) {
+            System.out.println(book);
+        }
+    }
+
+    public static void getBookByFirstVowel(Set<Book2> data, String... vowels) { // a method to single out books
+        for (Book2 book : data) { //for each loop to look through each book
+            for (String vlw : vowels) { //for each loop to look through each vowel letter
+                if (book.getTitle().toLowerCase().startsWith(vlw)) { //if-method to single out the book we need
+                    System.out.println(book); //to show the book we found
+                    break; //the usage of "break" iterator saves the time in case of finding the necessary book
+                }
+            }
+        }
+    }
+}
