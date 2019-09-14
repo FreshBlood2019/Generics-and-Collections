@@ -47,3 +47,29 @@ public class Book2Main {
         UtilBook3.getBookByAuthorMiddleNameSet(setOfBooks);
     }
 }
+The output is:
+Book2{id=17, year=2000, title='Angels & Demons', authorName='Daniel', authorMiddleName='Gerhard', authorSurname='Brown'}
+Book2{id=10, year=1945, title='Animal Farm', authorName='George', authorMiddleName='Author', authorSurname='Orwell'}
+ID: 11 The author's middle name: Adu The title: The Kite Runner
+ID: 3 The author's middle name: Arthur The title: 1948
+ID: 19 The author's middle name: Arthur The title: Lord of the Flies
+ID: 10 The author's middle name: Author The title: Animal Farm
+ID: 5 The author's middle name: David The title: The Catcher in the Rye
+ID: 8 The author's middle name: Elizabeth The title: The Hunger Games
+ID: 18 The author's middle name: Elizabeth The title: Wuthering Heights
+ID: 9 The author's middle name: Elizabeth The title: Jane Eyre
+ID: 22 The author's middle name: Elizabeth The title: Catching Fire
+ID: 7 The author's middle name: Elizabeth The title: Twilight
+ID: 16 The author's middle name: Elizabeth The title: New Moon
+ID: 17 The author's middle name: Gerhard The title: Angels & Demons
+ID: 2 The author's middle name: Gerhard The title: The Da Vinci Code
+ID: 24 The author's middle name: John The title: The Girl with the Dragon Tattoo
+ID: 13 The author's middle name: Ronald The title: The Lord of the Rings
+ID: 21 The author's middle name: Ronald The title: The Two Towers
+ID: 14 The author's middle name: Ronald The title: The Fellowship of the Ring
+ID: 1 The author's middle name: Ronald The title: The Hobbit
+ID: 6 The author's middle name: Scott The title: The Great Gatsby
+ID: 25 The author's middle name: Stephan The title: The Book Thief
+
+Process finished with exit code 0
+
