@@ -1,0 +1,46 @@
+package JavaClass09;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Set;
+
+public class UtilBook3 {
+    public static void getBookByAuthorSurnameList(List<Book2> data) {
+        Comparator<Book2> cmpr = Comparator.comparing(Book2::getAuthorSurname);
+        data.sort(cmpr);
+        for (Book2 book2 : data) {
+            System.out.println("ID: " + book2.getId() + " " + "The author's surname: "
+                    + book2.getAuthorSurname() + " " + "The title: " + book2.getTitle());
+        }
+    }
+    public static void getBookByAuthorSurnameSet (Set<Book2> set) {
+        List<Book2> data = new ArrayList<>(set);
+        UtilBook3.getBookByAuthorSurnameList(data);
+    }
+    public static void getBookByAuthorNameList (List<Book2> data) {
+        Comparator<Book2> cmpr = Comparator.comparing(Book2::getAuthorName);
+        data.sort(cmpr);
+        for (Book2 book2 : data) {
+            System.out.println("ID: " + book2.getId() + " " + "The author's name: "
+                    + book2.getAuthorName() + " " + "The title: " + book2.getTitle());
+        }
+    }
+    public static void getBookByAuthorNameSet (Set<Book2> set) {
+        List<Book2> data = new ArrayList<>(set);
+        UtilBook3.getBookByAuthorNameList(data);
+    }
+    public static void getBookByAuthorMiddleNameList (List<Book2> data) {
+        Comparator<Book2> cmpr = Comparator.comparing(Book2::getAuthorMiddleName);
+        data.sort(cmpr);
+        for (Book2 book2 : data) {
+            System.out.println("ID: " + book2.getId() + " " + "The author's middle name: "
+                    + book2.getAuthorMiddleName() + " " + "The title: " + book2.getTitle());
+        }
+    }
+    public static void getBookByAuthorMiddleNameSet (Set<Book2> set) {
+        List<Book2> data = new ArrayList<>(set);
+        UtilBook3.getBookByAuthorMiddleNameList(data);
+    }
+
+}
