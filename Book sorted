@@ -1,0 +1,99 @@
+package JavaClass09;
+
+import java.util.Objects;
+
+public class Book2 {
+    private int id;
+    private int year;
+    private String title;
+    private String authorName;
+    private String authorMiddleName;
+    private String authorSurname;
+
+    public Book2(int id, int year, String title, String authorName, String authorMiddleName, String authorSurname) {
+        this.id = id;
+        this.year = year;
+        this.title = title;
+        this.authorName = authorName;
+        this.authorMiddleName = authorMiddleName;
+        this.authorSurname = authorSurname;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public String getAuthorMiddleName() {
+        return authorMiddleName;
+    }
+
+    public void setAuthorMiddleName(String authorMiddleName) {
+        this.authorMiddleName = authorMiddleName;
+    }
+
+    public String getAuthorSurname() {
+        return authorSurname;
+    }
+
+    public void setAuthorSurname(String authorSurname) {
+        this.authorSurname = authorSurname;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book2 book2 = (Book2) o;
+        return id == book2.id &&
+                year == book2.year &&
+                title.equals(book2.title) &&
+                authorName.equals(book2.authorName) &&
+                authorMiddleName.equals(book2.authorMiddleName) &&
+                authorSurname.equals(book2.authorSurname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, year, title, authorName, authorMiddleName, authorSurname);
+    }
+
+    @Override
+    public String toString() {
+        return "Book2{" +
+                "id=" + id +
+                ", year=" + year +
+                ", title='" + title + '\'' +
+                ", authorName='" + authorName + '\'' +
+                ", authorMiddleName='" + authorMiddleName + '\'' +
+                ", authorSurname='" + authorSurname + '\'' +
+                '}';
+    }
+}
