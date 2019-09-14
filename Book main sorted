@@ -1,0 +1,49 @@
+package JavaClass09;
+
+import java.util.*;
+
+public class Book2Main {
+    public static void main(String[] args) {
+        Book2 book1 = new Book2(1, 1937, "The Hobbit", "John", "Ronald", "Tolkien");
+        Book2 book2 = new Book2(2, 2003, "The Da Vinci Code", "Daniel", "Gerhard", "Brown");
+        Book2 book3 = new Book2(3, 1949, "1948", "George", "Arthur", "Orwell");
+        Book2 book4 = new Book2(7, 2005, "Twilight", "Stephenie", "Elizabeth", "Meyer");
+        Book2 book5 = new Book2(5, 1952, "The Catcher in the Rye", "Jerome", "David", "Salinger");
+        Book2 book6 = new Book2(6, 1925, "The Great Gatsby", "Francis", "Scott", "Fitzgerald");
+        Book2 book7 = new Book2(7, 2005, "Twilight", "Stephenie", "Elizabeth", "Meyer");
+        Book2 book8 = new Book2(8, 2008, "The Hunger Games", "Suzanne", "Elizabeth", "Collins");
+        Book2 book9 = new Book2(9, 1847, "Jane Eyre", "Charlotte", "Elizabeth", "Brontë");
+        Book2 book10 = new Book2(10, 1945, "Animal Farm", "George", "Author", "Orwell");
+        Book2 book11 = new Book2(11, 2003, "The Kite Runner", "Khaled", "Adu", "Hosseini");
+        Book2 book12 = new Book2(7, 2005, "Twilight", "Stephenie", "Elizabeth", "Meyer");
+        Book2 book13 = new Book2(13, 1954, "The Lord of the Rings", "John", "Ronald", "Tolkien");
+        Book2 book14 = new Book2(14, 1954, "The Fellowship of the Ring", "John", "Ronald", "Tolkien");
+        Book2 book15 = new Book2(7, 2005, "Twilight", "Stephenie", "Elizabeth", "Meyer");
+        Book2 book16 = new Book2(16, 2006, "New Moon", "Stephenie", "Elizabeth", "Meyer");
+        Book2 book17 = new Book2(17, 2000, "Angels & Demons", "Daniel", "Gerhard", "Brown");
+        Book2 book18 = new Book2(18, 1847, "Wuthering Heights", "Emily", "Elizabeth", "Brontë");
+        Book2 book19 = new Book2(19, 1954, "Lord of the Flies", "William", "Arthur", "Golding");
+        Book2 book20 = new Book2(7, 2005, "Twilight", "Stephenie", "Elizabeth", "Meyer");
+        Book2 book21 = new Book2(21, 1954, "The Two Towers", "John", "Ronald", "Tolkien");
+        Book2 book22 = new Book2(22, 2009, "Catching Fire", "Suzanne", "Elizabeth", "Collins");
+        Book2 book23 = new Book2(7, 2005, "Twilight", "Stephenie", "Elizabeth", "Meyer");
+        Book2 book24 = new Book2(24, 2005, "The Girl with the Dragon Tattoo", "Stieg", "John", "Larsson");
+        Book2 book25 = new Book2(25, 2005, "The Book Thief", "Markus", "Stephan", "Zusak");
+
+        Book2[] books = {book1, book2, book3, book4, book5, book6, book7, book8, book9,
+                book10, book11, book12, book13, book14, book15, book16, book17, book18, book19,
+                book20, book21, book22, book23, book24, book25}; //creating an array of books
+
+        Set<Book2> setOfBooks = new HashSet<>(Arrays.asList(books)); // creating a set of books
+
+        //UtilHashSet.getBooks(setOfBooks); //method calling to print all the books
+
+        String[] vwl = {"a", "e", "i", "o", "y"}; //creating an array of letters
+        UtilHashSet.getBookByFirstVowel(setOfBooks, vwl); //method calling to single out the specific book
+        // (or books) from the set
+
+        //UtilBook3.getBookByAuthorSurnameSet(setOfBooks);
+        //UtilBook3.getBookByAuthorNameSet(setOfBooks);
+        UtilBook3.getBookByAuthorMiddleNameSet(setOfBooks);
+    }
+}
